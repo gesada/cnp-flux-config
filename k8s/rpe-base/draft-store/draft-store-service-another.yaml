@@ -2,10 +2,10 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: draft-store-service
+  name: draft-store-service-another
   namespace: rpe
 spec:
-  releaseName: draft-store-service
+  releaseName: draft-store-service-another
   chart:
     repository: https://hmcts.azurecr.io/helm/v1/repo/
     name: draft-store-service
