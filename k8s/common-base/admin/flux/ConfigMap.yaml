@@ -1,9 +1,0 @@
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: environment
-annotations:
-  flux.weave.works/ignore: "true"
-data:
-  email: "test@hmcts.net"
-  user: "test"

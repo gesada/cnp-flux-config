@@ -18,8 +18,8 @@ spec:
       pollInterval: 1m
       email: $(FLUX_EMAIL)
       user: $(FLUX_USER)
-      path: "k8s/$(FLUX_FOLDER_NAME)/common,k8s/$(FLUX_FOLDER_NAME)/cluster-01/static-overlay,k8s/$(FLUX_FOLDER_NAME)/cluster-01/automated-overlay,k8s/common,k8s/$(FLUX_FOLDER_NAME)/automated-overlay"
-      label: "sandbox-cluster-01"
+      path: "k8s/$(FLUX_FOLDER_NAME)/common,k8s/$(FLUX_FOLDER_NAME)/cluster-$(CLUSTER_NUMBER)/static-overlay,k8s/$(FLUX_FOLDER_NAME)/cluster-$(CLUSTER_NUMBER)/automated-overlay,k8s/common"
+      label: "$(CLUSTER_NAME)"
     syncGarbageCollection:
       enabled: true
     registry:

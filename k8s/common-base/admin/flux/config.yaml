@@ -1,7 +1,0 @@
-varReference:
-  - path: spec/values/git/email
-    kind: HelmRelease
-  - path: spec/values/git/user
-    kind: HelmRelease
-  - path: spec/values/git/path
-    kind: HelmRelease

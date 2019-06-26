@@ -3,3 +3,64 @@ kind: Kustomization
 bases:
 - admin
 - kured
+configurations:
+- var-config.yaml
+resources:
+- variablesConfigMap.yaml
+vars:
+  - name: FLUX_EMAIL
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.fluxEmail
+  - name: FLUX_USER
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.fluxUser
+  - name: FLUX_FOLDER_NAME
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.fluxFolder
+  - name: AKS_ENV_NAME
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.envName
+  - name: CLUSTER_NUMBER
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.clusterNumber
+  - name: CLUSTER_NAME
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.clusterName
+  - name: TRAEFIK_LBIP
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+      fieldpath: data.traefikLbIp
+  - name : TRAEFIK_DOMAIN
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment-variables
+    fieldref:
+     fieldpath: data.traefikDomain

@@ -1,0 +1,13 @@
+varReference:
+  - path: spec/values/git
+    kind: HelmRelease
+  - path: spec/values/envVars
+    kind: HelmRelease
+  - path: spec/values/environment
+    kind: HelmRelease
+  - path: spec/values/extraArgs
+    kind: HelmRelease
+  - path: spec/values
+    kind: HelmRelease
+  - path: spec/values/dashboard
+    kind: HelmRelease

@@ -20,3 +20,5 @@ spec:
       SLACK_ICON_EMOJI: ":liam_is_watching:"
       GITHUB_URL: "https://github.com/hmcts/cnp-flux-config/"
       LISTEN_ADDRESS: ":3032"
+      SLACK_CHANNEL: "#aks-monitor-$(AKS_ENV_NAME)"
+      SLACK_USERNAME: $(CLUSTER_NAME)

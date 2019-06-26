@@ -1,0 +1,13 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: environment-variables
+data:
+  fluxEmail: "hmcts-flux-sandbox@hmcts.net"
+  fluxUser: "Flux Sandbox"
+  fluxFolder: "sandbox"
+  envName: "sbox"
+  clusterNumber: "00"
+  clusterName: "sbox-00-aks"
+  traefikLbIp: "10.10.1.250"
+  traefikDomain: "traefik00.service.core-compute-sandbox.internal"

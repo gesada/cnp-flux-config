@@ -13,6 +13,7 @@ spec:
     version: 1.61.1
   values:
     imageTag: 1.7.9
+    loadBalancerIP: $(TRAEFIK_LBIP)
     resources:
       requests:
         cpu: 100m
@@ -27,6 +28,7 @@ spec:
       enabled: true
     dashboard:
       enabled: true
+      domain: $(TRAEFIK_DOMAIN)
     ssl:
       enabled: true
       tlsMinVersion: VersionTLS12

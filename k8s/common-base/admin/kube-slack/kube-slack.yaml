@@ -14,3 +14,7 @@ spec:
     version: 1.1.0
   valueFileSecrets:
     - name: "kube-slack-values"
+  values:
+    envVars:
+      SLACK_USERNAME: $(CLUSTER_NAME)
+      SLACK_CHANNEL: "aks-monitor-$(AKS_ENV_NAME)"
