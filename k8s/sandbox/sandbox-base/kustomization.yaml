@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
 - ../../common-base/
 patchesStrategicMerge:
-- admin/flux/flux.yaml
+  - ConfigMap.yaml

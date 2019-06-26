@@ -2,3 +2,28 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - flux.yaml
+- ConfigMap.yaml
+configurations:
+  - config.yaml
+vars:
+  - name: FLUX_EMAIL
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment
+    fieldref:
+      fieldpath: data.email
+  - name: FLUX_USER
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment
+    fieldref:
+      fieldpath: data.user
+  - name: FLUX_FOLDER_NAME
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: environment
+    fieldref:
+      fieldpath: data.user
